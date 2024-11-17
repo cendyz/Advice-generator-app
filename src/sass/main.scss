@@ -26,6 +26,32 @@ body {
 	align-items: center;
 }
 
+.loading {
+	width: 6vw;
+	height: 6vw;
+	border: 0.5em solid var(--grayish-blue);
+	border-top-color: var(--neon-green);
+	border-radius: 50%;
+	animation: rotate 1s linear infinite;
+}
+
+.error {
+	width: 90%;
+	max-width: 27em;
+}
+
+.error-text {
+	font-size: clamp(2.3rem, calc(2.3rem + ((30 - 23) * ((100vw - 320px) / (575 - 320)))), 3rem);
+	color: tomato;
+	text-align: center;
+}
+
+@keyframes rotate {
+	to {
+		rotate: 360deg;
+	}
+}
+
 .main {
 	display: grid;
 	grid-template-rows: 1fr auto auto;
