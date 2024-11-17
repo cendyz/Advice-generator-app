@@ -2,7 +2,7 @@
 
 :root {
 	--light-cyan: hsl(193, 38%, 86%);
-	--neon-green: hsl(150, 100%, 66%);
+	--neon-green: #52ffa8;
 	--grayish-blue: hsl(217, 19%, 38%);
 	--dark-grayish-blue: hsl(217, 19%, 24%);
 	--dark-blue: hsl(218, 23%, 16%);
@@ -91,7 +91,7 @@ body {
 	}
 
 	.main-advice-text {
-		margin-bottom: 2.125em;
+		margin-bottom: 1.1em;
 		font-size: 2.188em;
 	}
 
@@ -105,6 +105,36 @@ body {
 
 	.dice-icon {
 		width: 2.25em;
+	}
+}
+
+@media (min-width: 992px) {
+	.main-box {
+		width: 40em;
+	}
+	.dice-box {
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			border-radius: 50%;
+			-webkit-box-shadow: 0px 0px 24px 0px rgba(82, 255, 168, 1);
+			-moz-box-shadow: 0px 0px 24px 0px rgba(82, 255, 168, 1);
+			box-shadow: 0px 0px 24px 0px rgba(82, 255, 168, 1);
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
 	}
 }
 
