@@ -17,7 +17,7 @@ body,
 body {
 	background-color: var(--dark-blue);
 	font-family: "Manrope", sans-serif;
-	font-size: 28px;
+	font-size: 16px;
 }
 
 #root {
@@ -37,21 +37,21 @@ body {
 	padding: 6.88vw 5.63vw;
 	width: 90%;
 	background-color: var(--dark-grayish-blue);
-	border-radius: 0.3em;
+	border-radius: 3.13vw;
 	text-align: center;
 }
 
 .main-advice-number {
 	margin-bottom: 6.88vw;
 	color: var(--neon-green);
-	font-size: 2.5vw;
+	font-size: clamp(0.8rem, calc(0.8rem + ((11 - 8) * ((100vw - 320px) / (575 - 320)))), 1.1rem);
 	text-transform: uppercase;
-	letter-spacing: 0.94vw;
+	letter-spacing: 0.8vw;
 }
 
 .main-advice-text {
 	margin-bottom: 5.94vw;
-	font-size: 6.25vw;
+	font-size: clamp(2rem, calc(2rem + ((35 - 20) * ((100vw - 320px) / (575 - 320)))), 3.5rem);
 	font-weight: 800;
 	color: var(--light-cyan);
 }
@@ -66,7 +66,7 @@ body {
 	grid-column: 1;
 	grid-row: 2/4;
 	width: fit-content;
-	padding: clamp(1.2rem, calc(1.2rem + ((20 - 12) * ((100vw - 320px) / (575 - 320)))), 2rem);
+	padding: clamp(0.94em, calc(0.94em + ((20.8 - 15.04) * ((100vw - 320px) / (575 - 320)))), 1.3em);
 	background-color: var(--neon-green);
 	border-radius: 50%;
 }
@@ -74,6 +74,36 @@ body {
 .dice-icon {
 	display: block;
 	width: 6.25vw;
+}
+
+@media (min-width: 576px) {
+	.main-box {
+		padding: 3.9rem 3.2rem;
+		border-radius: 0.3em;
+	}
+
+	.main-advice-number {
+		margin-bottom: 6.88vw;
+		font-size: 2.5vw;
+		letter-spacing: 0.94vw;
+	}
+
+	.main-advice-text {
+		margin-bottom: 5.94vw;
+		font-size: 6.25vw;
+	}
+
+	.main-line-img {
+		margin-bottom: 8vw;
+	}
+
+	.dice-box {
+		padding: clamp(1.2rem, calc(1.2rem + ((20 - 12) * ((100vw - 320px) / (575 - 320)))), 2rem);
+	}
+
+	.dice-icon {
+		width: 6.25vw;
+	}
 }
 
 // - Mobile: 375px
