@@ -15,6 +15,7 @@ body,
 }
 
 body {
+	justify-content: center;
 	background-color: var(--dark-blue);
 	font-family: "Manrope", sans-serif;
 	font-size: 16px;
@@ -78,31 +79,32 @@ body {
 
 @media (min-width: 576px) {
 	.main-box {
-		padding: 3.9rem 3.2rem;
-		border-radius: 0.3em;
+		width: 32.375em;
+		padding: 2.5em 2em;
+		border-radius: 1.125em;
 	}
 
 	.main-advice-number {
-		margin-bottom: 6.88vw;
-		font-size: 2.5vw;
-		letter-spacing: 0.94vw;
+		margin-bottom: 2.5em;
+		font-size: 0.688em;
+		letter-spacing: 0.288em;
 	}
 
 	.main-advice-text {
-		margin-bottom: 5.94vw;
-		font-size: 6.25vw;
+		margin-bottom: 2.125em;
+		font-size: 2.188em;
 	}
 
 	.main-line-img {
-		margin-bottom: 8vw;
+		margin-bottom: 2.875em;
 	}
 
 	.dice-box {
-		padding: clamp(1.2rem, calc(1.2rem + ((20 - 12) * ((100vw - 320px) / (575 - 320)))), 2rem);
+		padding: 1.313em;
 	}
 
 	.dice-icon {
-		width: 6.25vw;
+		width: 2.25em;
 	}
 }
 
